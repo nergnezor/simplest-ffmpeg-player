@@ -66,6 +66,9 @@ extern "C"
 #endif
 #endif
 
+#ifdef main
+#undef main
+#endif
 //Refresh Event
 #define SFM_REFRESH_EVENT  (SDL_USEREVENT + 1)
 
@@ -121,7 +124,7 @@ int main(int argc, char* argv[])
 	struct SwsContext *img_convert_ctx;
 
 	//char filepath[]="bigbuckbunny_480x272.h265";
-	char filepath[]="Titanic.ts";
+	char filepath[]="udp://127.0.0.1:6666";
 
 	av_register_all();
 	avformat_network_init();

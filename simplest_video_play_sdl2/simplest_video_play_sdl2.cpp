@@ -57,7 +57,9 @@ const int pixel_w=320,pixel_h=180;
 
 unsigned char buffer[pixel_w*pixel_h*bpp/8];
 
-
+#ifdef main
+#undef main
+#endif
 //Refresh Event
 #define REFRESH_EVENT  (SDL_USEREVENT + 1)
 
